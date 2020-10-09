@@ -1,44 +1,68 @@
 package com.moringaschool.myspace;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
-import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private EditText Name;
-    private EditText Email;
-    private EditText Password;
-    private EditText PhoneNumber;
-    private Button CreateAcc;;
+    EditText Name;
+    EditText Email;
+    EditText Password;
+    EditText PhoneNumber;
+    Button Submit;
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_main);
 
-        Name = (EditText) findViewById(R.id.etName);
-        Email = (EditText) findViewById(R.id.etPassword);
-        Password = (EditText) findViewById(R.id.etPassword);
-        PhoneNumber = (EditText) findViewById(R.id.etNumber);
-        CreateAcc = (Button) findViewById(R.id.btnSubmit);
+        Name = findViewById(R.id.etName);
+        Email = findViewById(R.id.etEmail);
+        Password = findViewById(R.id.etPassword);
+        PhoneNumber = findViewById(R.id.etNumber);
+        Submit = findViewById(R.id.btnSubmit);
 
-        CreateAcc.setOnContextClickListener(new View.OnContextClickListener() {
+        Submit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onContextClick(View v) {
-                return false;
+            public void onClick(View view) {
+                checkDataEntered();
             }
         });
+    }
 
+    boolean isEmail(EditText text) {
+        CharSequence email = text.getText().toString();
+        return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
+    }
 
+    boolean isEmpty(EditText text) {
+        CharSequence str = text.getText().toString();
+        return TextUtils.isEmpty(str);
+    }
+
+    void checkDataEntered() {
+        if (isEmpty(Name)) {
+            Toast t = Toast.makeText(this, "You must enter first name to register!", Toast.LENGTH_SHORT);
+            t.show();
+        }
+
+        if (isEmpty(PhoneNumber)) {
+            PhoneNumber.setError("PhoneNumber is required!");
+        }
+
+        if (isEmail(Email) == false) {
+            Email.setError("Enter valid Email!");
+        }
 
     }
 }
+
+
