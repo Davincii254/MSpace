@@ -84,5 +84,6 @@
         android:text="Name"
         android:textColor="#DFDC3A"
         tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="113dp" />
+        tools:layout_editor_absoluteY="113dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

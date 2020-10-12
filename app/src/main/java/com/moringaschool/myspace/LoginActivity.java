@@ -1,77 +1,50 @@
 package com.moringaschool.myspace;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.btnLogin) Button mBtnLogin;
-
-    private EditText Name;
-    private EditText Password;
-    private TextView info;
-    private Button Login;
-    private int counter = 5;
+    @BindView(R.id.etName) EditText Name;
+    @BindView(R.id.etPassword) EditText Password;
 
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
-    @SuppressLint({"WrongViewCast", "SetTextI18n"})
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_main);
+        ButterKnife.bind(this);
 
-        Name = (EditText) findViewById(R.id.etName);
-        Password = (EditText) findViewById(R.id.etPassword);
-        info = (EditText) findViewById(R.id.tvinfo);
-        Login = (Button) findViewById(R.id.btnLogin);
-
-        info.setText("No of attemps remaning:5");
-
-        Login.setOnContextClickListener(new View.OnContextClickListener() {
-            @Override
-            public boolean onContextClick(View v) {
-                validate(Name.getText().toString(), Password.getText().toString());
-                return false;
-            }
-        });
+        mBtnLogin.setOnClickListener(this);
 
 
-    }
-
-    @SuppressLint("SetTextI18n")
-    private void validate (String username, String userPassword){
-        if((username == "Admin" && userPassword == "1234")){
+}
+    @Override
+    public void onClick(View v) {
+        validate(Name.getText().toString(), Password.getText().toString());
+        if (v == mBtnLogin){
             Intent intent = new Intent(LoginActivity.this, SecondActivity.class);
             startActivity(intent);
-        }else {
-            counter--;
-
-            info.setText("No attempts remaining: " + String.valueOf(counter));
-            if(counter == 0){
-                Login.setEnabled((false));
-            }
         }
     }
 
-    @Override
-    public void onClick(View view) {
-        if (view == mBtnLogin){
-            Button btnlogin = (Button) findViewById(R.id.btnSingin);
-            btnlogin.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, SecondActivity.class)));
 
+
+    public boolean validate (String username, String userPassword) {
+        if ((username == "Admin" && userPassword == "1234")) {
         }
-
-
-    }
-}
+        return true;
+    } ;
+};

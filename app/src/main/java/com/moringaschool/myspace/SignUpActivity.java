@@ -12,48 +12,39 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
     @BindView(R.id.btnSubmit) Button mBtnSubmit;
+    @BindView(R.id.etName) EditText Name;
+    @BindView(R.id.etEmail) EditText Email;
+    @BindView(R.id.etPassword) EditText Password;
+    @BindView(R.id.etNumber) EditText PhoneNumber;
 
 
-    EditText Name;
-    EditText Email;
-    EditText Password;
-    EditText PhoneNumber;
-    Button Submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sign_up);
+        ButterKnife.bind(this);
 
-        Name = findViewById(R.id.etName);
-        Email = findViewById(R.id.etEmail);
-        Password = findViewById(R.id.etPassword);
-        PhoneNumber = findViewById(R.id.etNumber);
-        Submit = findViewById(R.id.btnSubmit);
+        mBtnSubmit.setOnClickListener(this);
 
-        Submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                checkDataEntered();
-            }
-        });
     }
 
-    boolean isEmail(EditText text) {
+   public boolean isEmail(EditText text) {
         CharSequence email = text.getText().toString();
         return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
     }
 
-    boolean isEmpty(EditText text) {
+   public boolean isEmpty(EditText text) {
         CharSequence str = text.getText().toString();
         return TextUtils.isEmpty(str);
     }
 
-    void checkDataEntered() {
+   public void checkDataEntered() {
         if (isEmpty(Name)) {
             Toast t = Toast.makeText(this, "You must enter first name to register!", Toast.LENGTH_SHORT);
             t.show();
@@ -63,7 +54,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             PhoneNumber.setError("PhoneNumber is required!");
         }
 
-        if (isEmail(Email) == false) {
+        if (!isEmail(Email)) {
             Email.setError("Enter valid Email!");
         }
 
@@ -71,10 +62,13 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
-        if (view == mBtnSubmit){
-            Button btnSubmit = (Button) findViewById(R.id.btnSingin);
-            btnSubmit.setOnClickListener(v -> startActivity(new Intent(SignUpActivity.this, SecondActivity.class)));
-
+        if (view == mBtnSubmit) {
+            isEmail(Email);
+            isEmpty(PhoneNumber);
+            isEmpty(Name);
+            isEmpty(Password);
+            Intent intent = new Intent(SignUpActivity.this, SecondActivity.class);
+            startActivity(intent);
         }
     }
 }

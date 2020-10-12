@@ -8,30 +8,35 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     @BindView(R.id.btnSignup) Button mBtnSignup;
     @BindView(R.id.btnSingin) Button mBtnSignin;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+
+        mBtnSignin.setOnClickListener(this);
+        mBtnSignup.setOnClickListener(this);
 
 }
 
     @Override
-    public void onClick(View view) {
-        if (view == mBtnSignin){
-            Button btnSignin = (Button) findViewById(R.id.btnSingin);
-            btnSignin.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, LoginActivity.class)));
-
+    public void onClick(View v) {
+        if (v == mBtnSignin){
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
         }
-        if (view == mBtnSignup){
-            Button btnSignup = (Button) findViewById(R.id.btnSignup);
-            btnSignup.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, SignUpActivity.class)));
-
+        if (v == mBtnSignup){
+            Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+            startActivity(intent);
         }
 
     }
