@@ -1,5 +1,6 @@
 package com.moringaschool.myspace;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -10,8 +11,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import butterknife.BindView;
 
-public class SignUpActivity extends AppCompatActivity {
+
+public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
+    @BindView(R.id.btnSubmit) Button mBtnSubmit;
+
 
     EditText Name;
     EditText Email;
@@ -62,6 +67,15 @@ public class SignUpActivity extends AppCompatActivity {
             Email.setError("Enter valid Email!");
         }
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view == mBtnSubmit){
+            Button btnSubmit = (Button) findViewById(R.id.btnSingin);
+            btnSubmit.setOnClickListener(v -> startActivity(new Intent(SignUpActivity.this, SecondActivity.class)));
+
+        }
     }
 }
 

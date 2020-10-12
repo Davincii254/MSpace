@@ -7,7 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.BindView;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    @BindView(R.id.btnSignup) Button mBtnSignup;
+    @BindView(R.id.btnSingin) Button mBtnSignin;
 
 
     @Override
@@ -15,10 +19,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnSignin = (Button) findViewById(R.id.btnSingin);
-        btnSignin.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, LoginActivity.class)));
+}
 
-        Button btnSignup = (Button) findViewById(R.id.btnSignup);
-        btnSignup.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, SignUpActivity.class)));
-}}
+    @Override
+    public void onClick(View view) {
+        if (view == mBtnSignin){
+            Button btnSignin = (Button) findViewById(R.id.btnSingin);
+            btnSignin.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, LoginActivity.class)));
+
+        }
+        if (view == mBtnSignup){
+            Button btnSignup = (Button) findViewById(R.id.btnSignup);
+            btnSignup.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, SignUpActivity.class)));
+
+        }
+
+    }
+}
 

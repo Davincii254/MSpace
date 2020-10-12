@@ -2,7 +2,6 @@ package com.moringaschool.myspace;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.icu.text.IDNA;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +12,10 @@ import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LoginActivity extends AppCompatActivity {
+import butterknife.BindView;
+
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+    @BindView(R.id.btnLogin) Button mBtnLogin;
 
     private EditText Name;
     private EditText Password;
@@ -47,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint("SetTextI18n")
     private void validate (String username, String userPassword){
         if((username == "Admin" && userPassword == "1234")){
             Intent intent = new Intent(LoginActivity.this, SecondActivity.class);
@@ -59,5 +62,16 @@ public class LoginActivity extends AppCompatActivity {
                 Login.setEnabled((false));
             }
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view == mBtnLogin){
+            Button btnlogin = (Button) findViewById(R.id.btnSingin);
+            btnlogin.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, SecondActivity.class)));
+
+        }
+
+
     }
 }
