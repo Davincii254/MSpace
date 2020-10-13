@@ -11,8 +11,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
-    @BindView(R.id.listView) TextView mSatelliteTextView;
-    @BindView(R.id.locationTextView) TextView mLocationTextView;
+    @BindView(R.id.satelliteTextView) TextView mSatelliteTextView;
+    @BindView(R.id.listView) TextView mListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -3,10 +3,6 @@ package com.moringaschool.myspace;
 import android.content.Context;
 import android.widget.ArrayAdapter;
 
-import androidx.annotation.NonNull;
-
-import java.util.List;
-
 public class SatelliteArrayAdapter extends ArrayAdapter {
     private Context mContext;
     private String[] mSatellite;
