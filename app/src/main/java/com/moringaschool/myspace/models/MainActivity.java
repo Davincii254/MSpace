@@ -1,4 +1,4 @@
-package com.moringaschool.myspace;
+package com.moringaschool.myspace.models;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.moringaschool.myspace.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

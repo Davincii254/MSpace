@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#100F0F"
     android:visibility="visible"
-    tools:context=".SecondActivity">
+    tools:context=".models.SecondActivity">
 
     <ImageView
         android:id="@+id/imageView1"

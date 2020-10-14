@@ -1,4 +1,4 @@
-package com.moringaschool.myspace;
+package com.moringaschool.myspace.adapters;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;

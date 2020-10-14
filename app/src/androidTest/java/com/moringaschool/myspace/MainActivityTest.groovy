@@ -1,13 +1,17 @@
 package com.moringaschool.myspace
 
+import com.moringaschool.myspace.models.SatelliteActivity;
+import androidx.test.rule.ActivityTestRule
+import androidx.test.runner.AndroidJUnit4
+import org.junit.Rule
+import org.junit.runner.RunWith
+
+@RunWith(AndroidJUnit4.class)
 class MainActivityTest {
-    void setUp() {
-        super.setUp()
-    }
 
-    void tearDown() {
-    }
 
-    void testOnCreate() {
-    }
+    @Rule
+    public ActivityTestRule<SatelliteActivity> activityTestRule =
+            new ActivityTestRule<>(SatelliteActivity.class);
+
 }
