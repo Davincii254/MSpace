@@ -1,6 +1,6 @@
 package com.moringaschool.myspace
 
-import com.moringaschool.myspace.models.SatelliteActivity;
+
 import androidx.test.rule.ActivityTestRule
 import androidx.test.runner.AndroidJUnit4
 import org.junit.Rule

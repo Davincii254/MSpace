@@ -4,49 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#100F0F"
-    android:visibility="visible"
-    tools:context=".models.SecondActivity">
+    android:padding="8dp"
+    tools:context=".SecondActivity">
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:background="@drawable/background1"
-        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/satelliteTextView"
-        android:layout_width="111dp"
-        android:layout_height="29dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="#E30B0B"
-        android:backgroundTint="#C12525"
-        android:text="satellites "
+        <ImageView
+            android:id="@+id/restaurantImageView"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/header"
+            tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="237dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="276dp"
+        android:background="#000000"
+        android:text="Visit Apods of the day"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/restaurantImageView"
+        app:layout_constraintVertical_bias="0.309" />
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="375dp"
-        android:layout_height="357dp"
-        android:layout_below="@+id/satelliteTextView"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:background="#8F7E7E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/satelliteTextView"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
