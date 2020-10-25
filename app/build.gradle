@@ -15,7 +15,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.moringaschool.myspace"
+        applicationId "com.moringaschool.mySpace"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
