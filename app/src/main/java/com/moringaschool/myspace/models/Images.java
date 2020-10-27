@@ -12,7 +12,7 @@ public class Images {
 
     @SerializedName("Images")
     @Expose
-    private List<Images> images = null;
+    public List<Images> images = null;
 
     /**
      * No args constructor for use in serialization

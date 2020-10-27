@@ -12,10 +12,10 @@ public class Techport {
 
     @SerializedName("id_parameter")
     @Expose
-    private String idParameter;
+    public String idParameter;
     @SerializedName("Techport")
     @Expose
-    private List<Techport> techport = null;
+    public List<Techport> techport = null;
 
 
     /**

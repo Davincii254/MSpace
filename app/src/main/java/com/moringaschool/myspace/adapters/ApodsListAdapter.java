@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
 
 public class ApodsListAdapter extends RecyclerView.Adapter<ApodsListAdapter.ApodViewHolder>  {
     private List<Apods> mApods;
-    private ApodsListActivity mContext;
+    private Context mContext;
 
     public ApodsListAdapter(ApodsListActivity context, List<Apods> apods){
         mContext = context;
@@ -34,16 +34,24 @@ public class ApodsListAdapter extends RecyclerView.Adapter<ApodsListAdapter.Apod
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mApods.size();
     }
 
     public class ApodViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        @BindView(R.id.Date) TextView mDate;
-        @BindView(R.id.Apodimage) ImageView mApodimage;
+        @BindView(R.id.copyright) TextView mCopyright;
+        @BindView(R.id.date) TextView mDate;
+        @BindView(R.id.explanation) TextView mExplanation;
+        @BindView(R.id.hdurl) TextView mHdurl;
+        @BindView(R.id.media_type) TextView mMedia_type;
+        @BindView(R.id.service_version) TextView mServiceVersion;
+        @BindView(R.id.title) TextView mTittle;
+        @BindView(R.id.url) TextView mUrl;
+
+
 
         private Context mContext;
 
-        public ApodViewHolder(@NonNull View itemView) {
+        public ApodViewHolder( View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
             mContext = itemView.getContext();
@@ -52,8 +60,14 @@ public class ApodsListAdapter extends RecyclerView.Adapter<ApodsListAdapter.Apod
 
 
         public void bindApods(Apods apods) {
-            mDate.setText(Apods.getDate());
-
+            mCopyright.setText(apods.getCopyright());
+            mDate.setText(apods.getDate());
+            mExplanation.setText(apods.getExplanation());
+            mHdurl.setText(apods.getHdurl());
+            mMedia_type.setText(apods.getMediaType());
+            mServiceVersion.setText(apods.getServiceVersion());
+            mTittle.setText(apods.getTitle());
+            mUrl.setText(apods.getUrl());
         }
         @Override
         public void onClick(View v) {
@@ -76,4 +90,5 @@ public class ApodsListAdapter extends RecyclerView.Adapter<ApodsListAdapter.Apod
     public void onBindViewHolder(@NonNull ApodsListAdapter.ApodViewHolder holder, int position) {
         holder.bindApods(mApods.get(position));
     }
+
 }

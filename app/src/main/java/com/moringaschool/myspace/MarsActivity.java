@@ -1,4 +1,4 @@
-package com.moringaschool.myspace.ui;
+package com.moringaschool.myspace;
 
 import androidx.appcompat.app.AppCompatActivity;
 

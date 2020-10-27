@@ -12,16 +12,16 @@ public class MarsRoverPhotosEarthDays {
 
     @SerializedName("earth_date")
     @Expose
-    private String earthDate;
+    public String earthDate;
     @SerializedName("camera")
     @Expose
-    private String camera;
+    public String camera;
     @SerializedName("page")
     @Expose
-    private Integer page;
+    public Integer page;
     @SerializedName("MarsPhotos")
     @Expose
-    private List<MarsRoverPhotosEarthDays> marsRoverPhotosEarthDays = null;
+    public List<MarsRoverPhotosEarthDays> marsRoverPhotosEarthDays = null;
 
     /**
      * No args constructor for use in serialization

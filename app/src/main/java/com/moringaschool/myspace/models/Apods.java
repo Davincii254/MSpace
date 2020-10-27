@@ -12,28 +12,28 @@ import org.parceler.Parcel;
 public class Apods {
     @SerializedName("copyright")
     @Expose
-    private String copyright;
+    public String copyright;
     @SerializedName("date")
     @Expose
-    private static String date;
+    public static String date;
     @SerializedName("explanation")
     @Expose
-    private String explanation;
+    public String explanation;
     @SerializedName("hdurl")
     @Expose
-    private String hdurl;
+    public String hdurl;
     @SerializedName("media_type")
     @Expose
-    private String mediaType;
+    public String mediaType;
     @SerializedName("service_version")
     @Expose
-    private String serviceVersion;
+    public String serviceVersion;
     @SerializedName("title")
     @Expose
-    private String title;
+    public String title;
     @SerializedName("url")
     @Expose
-    private String url;
+    public String url;
 
     /**
      * No args constructor for use in serialization

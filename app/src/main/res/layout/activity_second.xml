@@ -7,29 +7,83 @@
     android:padding="8dp"
     tools:context=".SecondActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mainpg1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-13dp"
+        tools:layout_editor_absoluteY="103dp" />
 
-        <ImageView
-            android:id="@+id/restaurantImageView"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/header"
-            tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/appNameTextView"
+        android:layout_width="372dp"
+        android:layout_height="95dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Space Pirate"
+        android:textColor="@color/colorAccent"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="237dp"
-        android:layout_height="83dp"
-        android:layout_marginBottom="276dp"
-        android:background="#000000"
-        android:text="Visit Apods of the day"
-        android:textColor="@android:color/white"
+
+    <ImageButton
+        android:id="@+id/techportbutton"
+        android:layout_width="125dp"
+        android:layout_height="143dp"
+        android:background="@drawable/roundcorner"
+        app:layout_constraintBottom_toTopOf="@+id/asteroidbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+        app:layout_constraintVertical_bias="0.925"
+        app:srcCompat="@drawable/background"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/Imagesbutton"
+        android:layout_width="158dp"
+        android:layout_height="312dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/restaurantImageView"
-        app:layout_constraintVertical_bias="0.309" />
+        app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+        app:layout_constraintVertical_bias="0.819"
+        app:srcCompat="@drawable/background1"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/asteroidbutton"
+        android:layout_width="138dp"
+        android:layout_height="159dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+        app:layout_constraintVertical_bias="0.865"
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/button1"
+        android:layout_width="327dp"
+        android:layout_height="130dp"
+        app:layout_constraintBottom_toTopOf="@+id/Imagesbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+        app:layout_constraintVertical_bias="0.674"
+        app:srcCompat="@drawable/header"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

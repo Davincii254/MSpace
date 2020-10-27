@@ -1,11 +1,11 @@
 package com.moringaschool.myspace.network;
 
 
-import com.moringaschool.myspace.models.Apods;
 import com.moringaschool.myspace.models.Asteroids;
 import com.moringaschool.myspace.models.EarthImages;
 import com.moringaschool.myspace.models.Images;
 import com.moringaschool.myspace.models.MarsRoverPhotosEarthDays;
+import com.moringaschool.myspace.models.NasaApodSearchResponse;
 import com.moringaschool.myspace.models.TechTransfer;
 import com.moringaschool.myspace.models.Techport;
 
@@ -17,7 +17,7 @@ import retrofit2.http.Query;
 
 public interface NasaApi {
     @GET("apod/")
-     Call <List<Apods>> getApods(
+    Call<NasaApodSearchResponse> getApods(
     @Query("date") String date,
     @Query("hd") String hd,
     @Query("api_key") String apiKey

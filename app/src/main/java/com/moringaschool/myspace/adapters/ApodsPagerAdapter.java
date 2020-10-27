@@ -13,7 +13,6 @@ public class ApodsPagerAdapter extends FragmentPagerAdapter {
 
     public ApodsPagerAdapter(FragmentManager fm, int behavior, List<Apods> apods) {
         super(fm, behavior);
-
         mApods = apods;
     }
 

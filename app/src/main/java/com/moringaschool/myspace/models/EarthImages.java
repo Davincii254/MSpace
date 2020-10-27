@@ -12,22 +12,22 @@ public class EarthImages {
 
     @SerializedName("lon")
     @Expose
-    private String lon;
+    public String lon;
     @SerializedName("lat")
     @Expose
-    private String lat;
+    public String lat;
     @SerializedName("dim")
     @Expose
-    private String dim;
+    public String dim;
     @SerializedName("date")
     @Expose
-    private String date;
+    public String date;
     @SerializedName("cloud_score")
     @Expose
-    private String cloudScore;
+    public String cloudScore;
     @SerializedName("EarthImages")
     @Expose
-    private List<EarthImages> earthImages = null;
+    public List<EarthImages> earthImages = null;
 
     /**
      * No args constructor for use in serialization
