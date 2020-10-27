@@ -8,7 +8,7 @@ Space App is an application that will allow users to log in, view different thin
 the patents available for the public from NASA.
 
 -- Background Information --
-The project is aa RESFUL API from NASA and gets live updates to bring the user the latest and updated information.
+The project is a RESTFUL API from NASA and gets live updates to bring the user the latest and updated information.
 
 
 NASA API
@@ -48,7 +48,7 @@ NASA-Api - https://nasa.gov
 
 LICENSE
 
-Copyright 2020 Shem Victor Kuria
+Copyright 2020 Victor Kuria
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
