@@ -59,11 +59,13 @@ public class ApodsDetailFragment extends Fragment implements View.OnClickListene
         apodsDetailFragment.setArguments(args);
         return apodsDetailFragment;
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mApods = Parcels.unwrap(getArguments().getParcelable("apods"));
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.apod_detail_fragment, container, false);
@@ -94,4 +96,3 @@ public class ApodsDetailFragment extends Fragment implements View.OnClickListene
         }
     }
 }
-

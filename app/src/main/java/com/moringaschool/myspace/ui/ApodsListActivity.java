@@ -74,6 +74,7 @@ public class ApodsListActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<NasaApodSearchResponse> call, Response<NasaApodSearchResponse> response) {
                     if (response.isSuccessful()){
+                        Log.e(TAG, "CHECK");
                         hideProgressBar();
                         apods = response.body().getApods();
                         mAdapter = new ApodsListAdapter(ApodsListActivity.this,apods);
