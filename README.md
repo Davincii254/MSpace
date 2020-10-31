@@ -5,46 +5,41 @@ VICTOR KURIA
 Description
 
 Space App is an application that will allow users to log in, view different things through the app like APODS, Asteroids near and far from earth and see some of
-the patents available for the public from NASA.
+the patents available for the public from NASA. The main goal for the app is educate and bring the universe closer to the people and help us understand what is around us.
 
--- Background Information --
-The project is a RESTFUL API from NASA and gets live updates to bring the user the latest and updated information.
+SETUP/INSTALLATION REQUIREMENTS
+Download and install Android SDK
+Have atleast java 9 installed from https://openjdk.java.net/install/
+Espresso and Robolectric dependancies to run tests
+Firebase
+Clone or download this repository (link in the section below) to your local machine and run in ur code editor.
+Or alternatively go to https://github.com/davincii254/Space
 
+BDD
+Behaviour
+Account creation and Login authentication well implemented
+User is able to navigate through sections of different sections
+User is able to check his/her profile with updated content
+User is able to upload images
+User is able to see realtime image
+User is able to save their favorite images.
 
-NASA API
-• Retrofit.
+TECHNNOLOGIES USED
+Java 8
+Piccasso
+Robolectric
+Espresso
+Firebase Database
+Gson
+Retrofit
 
-• Picasso square for the Image Network.
-
-• Material design.
-
-Setup/Installation and Usage
-
-Clone this repository and open with Android Studio
-https://github.com/dAVINCII254/Myspace
-
-
-Emulate on a virtual Machine or on your Phone Device
-Get your API key https://nasa.gov/api
-|Replace your API key
-public static final String API_KEY = "your secret api key";
+Demo
 
 
 Future Implementation.
 Bring images taken by different satelites
 Inform the user of future launches
 Educate the user on some on our solar system mysteries
-
-
-TECHNNOLOGIES USED
-Java
-Android Studio
-Xml
-Roboelectric
-Espresso
-Postman - For testing the responses from the endpint params.
-Api Used
-NASA-Api - https://nasa.gov
 
 LICENSE
 
