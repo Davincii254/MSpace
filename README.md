@@ -3,12 +3,12 @@ MY SPACE APP
 VICTOR KURIA
 
 Description
-
-Space App is an application that will allow users to log in, view different things through the app like APODS, Asteroids near and far from earth and see some of
-the patents available for the public from NASA. The main goal for the app is educate and bring the universe closer to the people and help us understand what is around us.
+Space App's main goal for the app is educate and bring the universe closer to the people and help us understand what is around us.
+The will allow users to log in, view different things through the app like APODS(Astronomy Picture Of the Day), Asteroids near and far from earth and see some of
+the patents available for the public from NASA.
 
 SETUP/INSTALLATION REQUIREMENTS
-Download and install Android SDK
+Download and install Android SDK.
 Have atleast java 9 installed from https://openjdk.java.net/install/
 Espresso and Robolectric dependancies to run tests
 Firebase
