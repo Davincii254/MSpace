@@ -157,7 +157,7 @@ public class ApodsListActivity extends AppCompatActivity {
         mProgressBar.setVisibility(View.GONE);
     }
 
-    private void getApods(String query) { return;}
+    private void getApods(String query) { }
 }
 
 
@@ -187,7 +187,7 @@ public class ApodsListActivity extends AppCompatActivity {
 //        }{
 //        showUnsuccessfulMessage();
 //        }
-//        });
+//        })
 
 //-ish ish retro
 //    public void getApods(String date){
