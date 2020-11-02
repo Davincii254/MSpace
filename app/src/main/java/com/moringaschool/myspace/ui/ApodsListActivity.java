@@ -58,7 +58,7 @@ public class ApodsListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_apods_list);
+        setContentView(R.layout.apods_list);
         ButterKnife.bind(this);
 
        final Intent intent = getIntent();
