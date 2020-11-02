@@ -1,6 +1,7 @@
 package com.moringaschool.myspace;
 
 import android.content.Intent
+import android.widget.TextView
 import com.moringaschool.myspace.LoginActivity
 import com.moringaschool.myspace.MainActivity
 import com.moringaschool.myspace.SecondActivity
@@ -17,6 +18,11 @@ class MainActivityTest {
     @Before
     public void setup(){
         activity = Robolectric.setupActivity(MainActivity.class);
+    }
+    @Test
+    public void validateTextViewContent(){
+        TextView appNameTextView = activity.findViewById(R.id.appNameTextView);
+        assertTrue("MySpace".equals(appNameTextView.getText().toString()));
     }
     @Test
     public void LoginActivityStarted(){

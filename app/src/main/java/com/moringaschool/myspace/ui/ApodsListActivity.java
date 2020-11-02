@@ -96,13 +96,11 @@ public class ApodsListActivity extends AppCompatActivity {
                 }
             });
 
-//        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-//        mRecentDates = mSharedPreferences.getString(Constants.PREFERENCES_LOCATION_KEY, null);
-//        if (mRecentDates != null) {
-//            getApods(mRecentDates);
-//        }
-
-
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        mRecentDates = mSharedPreferences.getString(Constants.PREFERENCES_LOCATION_KEY, null);
+        if (mRecentDates != null) {
+            getApods(mRecentDates);
+        }
     }
 
         @Override

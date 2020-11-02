@@ -6,6 +6,7 @@ public class Constants {
     public static final String NASA_DATE_QUERY_PARAMETER = "Date";
     public static final String API_KEY_QUERY_PARAMETER = "Apods";
     public static final String PREFERENCES_LOCATION_KEY = "date";
+    public static final String FIREBASE_CHILD_APODS = "apods";
 }
 
 
