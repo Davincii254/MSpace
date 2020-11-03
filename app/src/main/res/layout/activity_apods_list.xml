@@ -47,8 +47,8 @@
                 android:layout_height="32dp"
                 android:layout_above="@+id/btnSubmit1"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="213dp"
-                android:layout_marginBottom="-40dp"
+                android:layout_marginEnd="172dp"
+                android:layout_marginBottom="-43dp"
                 android:text="Hint: 2020 January 15" />
 
             <Button

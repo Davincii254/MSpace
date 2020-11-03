@@ -17,21 +17,23 @@
         tools:layout_editor_absoluteX="-13dp"
         tools:layout_editor_absoluteY="103dp" />
 
+
     <TextView
         android:id="@+id/appNameTextView"
         android:layout_width="372dp"
         android:layout_height="95dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
         android:text="Space Pirate"
         android:textColor="@color/colorAccent"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
         tools:ignore="MissingConstraints" />
-
 
     <ImageButton
         android:id="@+id/techportbutton"
@@ -54,11 +56,13 @@
         android:layout_height="58dp"
         android:gravity="center"
         android:text="Techport"
-        android:textColor="@color/colorAccent"
+        android:textColor="#FFEB3B"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="368dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/techportbutton"
+        app:layout_constraintEnd_toEndOf="@+id/techportbutton"
+        app:layout_constraintStart_toStartOf="@+id/techportbutton"
+        app:layout_constraintTop_toTopOf="@+id/techportbutton"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/Imagesbutton"
@@ -80,11 +84,13 @@
         android:layout_height="58dp"
         android:gravity="center"
         android:text="Images"
-        android:textColor="@color/colorAccent"
+        android:textColor="#FFEB3B"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="227dp"
-        tools:layout_editor_absoluteY="465dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/Imagesbutton"
+        app:layout_constraintEnd_toEndOf="@+id/Imagesbutton"
+        app:layout_constraintStart_toStartOf="@+id/Imagesbutton"
+        app:layout_constraintTop_toTopOf="@+id/Imagesbutton"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/asteroidbutton"
@@ -107,11 +113,13 @@
         android:layout_height="58dp"
         android:gravity="center"
         android:text="Asteroids"
-        android:textColor="@color/colorAccent"
+        android:textColor="#FFEB3B"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="538dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/asteroidbutton"
+        app:layout_constraintEnd_toEndOf="@+id/asteroidbutton"
+        app:layout_constraintStart_toStartOf="@+id/asteroidbutton"
+        app:layout_constraintTop_toTopOf="@+id/asteroidbutton"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/button1"
@@ -134,9 +142,10 @@
         android:layout_height="45dp"
         android:gravity="center"
         android:text="Atsronomy Picture of the day"
-        android:textColor="@color/colorAccent"
+        android:textColor="#FFEB3B"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/button1"
+        app:layout_constraintTop_toTopOf="@+id/button1"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="204dp" />
+        tools:layout_editor_absoluteX="91dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
