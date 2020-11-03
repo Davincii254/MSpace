@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TechportActivity">
+
+    <TextView
+        android:id="@+id/textintro"
+        android:layout_width="384dp"
+        android:layout_height="430dp"
+        android:text="@string/the_techport_team_is_a_unique_group_whose_primary_goal_is_technology_communication_it_is_dedicated_to_finding_innovative_and_engaging_ways_to_document_highlight_visualize_and_advocate_for_the_amazing_technology_development_work_occurring_at_nasa_it_includes_developers_designers_architects_and_engineers_if_you_have_an_amazing_project_that_you_feel_may_change_the_life_for_the_better_then_fill_your_email_address_below_and_be_part_of_the_team"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.106" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etValue"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit1"
+        tools:layout_editor_absoluteX="-15dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit1"
+        android:layout_width="142dp"
+        android:layout_height="60dp"
+        android:text="SUBMIT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textintro"
+        app:layout_constraintVertical_bias="0.792" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

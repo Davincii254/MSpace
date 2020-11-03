@@ -25,6 +25,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     RecyclerView tvMain;
     @BindView(R.id.button1) ImageButton mButton1;
 
+
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 

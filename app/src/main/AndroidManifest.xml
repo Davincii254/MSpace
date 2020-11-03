@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.SavedApodActivity"></activity>
+        <activity android:name=".TechportActivity"></activity>
+        <activity android:name=".ui.SavedApodActivity" />
         <activity android:name=".MarsActivity" />
         <activity android:name=".ApodsActivity" />
         <activity android:name=".ui.ApodDetailActivity" />
