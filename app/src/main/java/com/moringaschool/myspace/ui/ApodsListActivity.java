@@ -99,42 +99,12 @@ public class ApodsListActivity extends AppCompatActivity {
             });
 
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        mRecentDates = mSharedPreferences.getString(Constants.PREFERENCES_LOCATION_KEY, null);
+        mRecentDates = mSharedPreferences.getString(Constants.PREFERENCES_DATE_KEY, null);
         if (mRecentDates != null) {
             getApods(mRecentDates);
         }
     }
 
-        @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_search, menu);
-        ButterKnife.bind(this);
-
-        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        mEditor = mSharedPreferences.edit();
-
-        MenuItem menuItem = menu.findItem(R.id.action_search);
-
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                addToSharedPreferences(query);
-                getApods(query);
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-
-            });
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -149,7 +119,7 @@ public class ApodsListActivity extends AppCompatActivity {
         mErrorTextView.setText("Something went wrong. Please try again later");
         mErrorTextView.setVisibility(View.VISIBLE); }
 
-    private void addToSharedPreferences(String date) { mEditor.putString(Constants.PREFERENCES_LOCATION_KEY, date).apply(); }
+    private void addToSharedPreferences(String date) { mEditor.putString(Constants.PREFERENCES_DATE_KEY, date).apply(); }
 
     private void showApods() {
         mRecycleView.setVisibility(View.VISIBLE);
@@ -223,4 +193,35 @@ public class ApodsListActivity extends AppCompatActivity {
 //              }
 //        });
 //
+//    }
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.menu_search, menu);
+//        ButterKnife.bind(this);
+//
+//        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+//        mEditor = mSharedPreferences.edit();
+//
+//        MenuItem menuItem = menu.findItem(R.id.action_search);
+//
+//        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
+//
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                addToSharedPreferences(query);
+//                getApods(query);
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//                return false;
+//            }
+//
+//        });
+//        return true;
 //    }
