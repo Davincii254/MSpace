@@ -52,7 +52,6 @@ public class FirebaseApodsViewHolder extends RecyclerView.ViewHolder implements 
     public TextView url;
     public Button save;
 
-//    public ImageView categoryTextView;
 
     public FirebaseApodsViewHolder(View itemView) {
         super(itemView);
@@ -70,10 +69,8 @@ public class FirebaseApodsViewHolder extends RecyclerView.ViewHolder implements 
         service_version = itemView.findViewById(R.id.service_version);
         tittle = itemView.findViewById(R.id.title);
         url = itemView.findViewById(R.id.url);
-        save = itemView.findViewById(R.id.url);
+        save = itemView.findViewById(R.id.save);
     }
-
-
 
     @Override
     public void onClick(View v) {
@@ -96,17 +93,14 @@ public class FirebaseApodsViewHolder extends RecyclerView.ViewHolder implements 
 
                 Intent intent = new Intent(mContext, ApodDetailActivity.class);
                 intent.putExtra("position", itemPosition + "");
-                intent.putExtra("top_headlines", Parcels.wrap(apods));
+                intent.putExtra("apods", Parcels.wrap(apods));
 
                 mContext.startActivity(intent);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
             }
         });
-
-
     }
 }

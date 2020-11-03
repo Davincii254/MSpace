@@ -31,6 +31,7 @@ public class ApodsActivity extends AppCompatActivity implements View.OnClickList
         ButterKnife.bind(this);
 
         mSubmit.setOnClickListener(this);
+        mSave.setOnClickListener(this);
     }
 
     @Override

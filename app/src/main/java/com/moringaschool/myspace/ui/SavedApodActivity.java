@@ -19,7 +19,7 @@ import com.moringaschool.myspace.models.Apods;
 public class SavedApodActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     ApodAdapter adapter; // Create Object of the Adapter class
-    DatabaseReference mbase; // Create object of the
+    DatabaseReference mbase; // Create object of the database
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

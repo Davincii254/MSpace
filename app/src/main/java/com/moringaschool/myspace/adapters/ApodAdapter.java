@@ -38,6 +38,8 @@ public class  ApodAdapter extends FirebaseRecyclerAdapter<Apods, ApodAdapter.Apo
      *
      * @param options
      */
+
+
     public ApodAdapter(@NonNull FirebaseRecyclerOptions<Apods> options) {
         super(options);
     }
@@ -50,7 +52,6 @@ public class  ApodAdapter extends FirebaseRecyclerAdapter<Apods, ApodAdapter.Apo
 
 
     }
-
 
     @Override
     public void
@@ -65,26 +66,30 @@ public class  ApodAdapter extends FirebaseRecyclerAdapter<Apods, ApodAdapter.Apo
 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
                 for(DataSnapshot ds : snapshot.getChildren()) {
                     Apods users = ds.getValue(Apods.class);
-                    Log.d("result", "User name: " + users.getCopyright() + ", email " + users.getExplanation());
+                    Log.d("result", "Copyright: " + users.getCopyright() + "date" + users.getDate() + " explanation " + users.getExplanation()
+                    + "hdurl" + users.getHdurl() + "media_type" + users.getMediaType() + "service_version" + users.getServiceVersion() + "title" +
+                            users.getTitle() + "url" + users.getUrl());
                     holder.copyright.setText(users.getCopyright());
+                    holder.date.setText(users.getDate());
                     holder.explanation.setText(users.getExplanation());
-
-
+                    holder.hdurl.setText(users.getHdurl());
+                    holder.media_type.setText(users.getMediaType());
+                    holder.service_version.setText(users.getServiceVersion());
+                    holder.title.setText(users.getTitle());
+                    holder.url.setText(users.getUrl());
                 }
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
-
-
     }
-
-
-
 
     public class ApodViewholder extends RecyclerView.ViewHolder {
         public TextView copyright, date, explanation, hdurl, media_type, service_version, title, url;

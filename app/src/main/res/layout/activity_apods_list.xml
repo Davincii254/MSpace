@@ -41,6 +41,16 @@
                 android:layout_marginEnd="56dp"
                 tools:ignore="MissingConstraints" />
 
+            <TextView
+                android:id="@+id/hint"
+                android:layout_width="173dp"
+                android:layout_height="32dp"
+                android:layout_above="@+id/btnSubmit1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="49dp"
+                android:layout_marginBottom="-40dp"
+                android:text="Hint: 2020 January 15" />
+
             <Button
                 android:id="@+id/btnSubmit1"
                 android:layout_width="171dp"
@@ -53,14 +63,19 @@
 
         </RelativeLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview"
-            android:layout_width="398dp"
-            android:layout_height="124dp" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="Astronomy Picture of the Day is provided by NASA and Michigan Technological University. According to the website,
+            Each day a different image or photograph of our universe is featured, along with a brief explanation written by a professional astronomer."
+            android:textColor="#FF9800"
+            android:textSize="21sp" />
 
 
         <TextView
             android:id="@+id/errorTextView"
+            android:text=""
             android:layout_width="316dp"
             android:layout_height="50dp" />
 

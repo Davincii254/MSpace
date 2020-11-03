@@ -16,19 +16,17 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface NasaApi {
-    @GET("apod/")
+    @GET("/apod")
     Call<NasaApodSearchResponse> getApods(
     @Query("date") String date,
     @Query("hd") String hd,
-    @Query("api_key") String apiKey
-    );
+    @Query("api_key") String apiKey);
 
     @GET("neo/rest/")
     Call<List<Asteroids>> getAsteroids(
             @Query("start_date") String start_date,
             @Query("end_date") String end_date,
-            @Query("api_key") String apiKey
-    );
+            @Query("api_key") String apiKey);
 
     @GET("planetary/earth/imagery/")
     Call<List<EarthImages>> getEarthImage(
@@ -37,8 +35,7 @@ public interface NasaApi {
             @Query("dim") String dim,
             @Query("date") String date,
             @Query("cloud_score") String cloud_score,
-            @Query("api_key") String apiKey
-    );
+            @Query("api_key") String apiKey);
 
     @GET(" https://images-api.nasa.gov")
     Call<List<Images>> getImage(
@@ -50,14 +47,12 @@ public interface NasaApi {
             @Query("mars") String earth_date,
             @Query("camera") String camera,
             @Query("page") String page,
-            @Query("api_key") String apiKey
-    );
+            @Query("api_key") String apiKey);
 
     @GET("https://api.nasa.gov/techport/api/projects/{id_parameter}?api_key=8RVaXYWs7HPc5GqaGjAhbPrTREKfzezB4YslyNTp")
     Call<List<Techport>> getTechport_(
             @Query("id_parameter") String id_parameter,
-            @Query("api_key") String apiKey
-    );
+            @Query("api_key") String apiKey);
 
     @GET("https://api.nasa.gov/techtransfer/patent/?engine&api_key=8RVaXYWs7HPc5GqaGjAhbPrTREKfzezB4YslyNTp")
     Call<List<TechTransfer>> getTechTransfer_(
@@ -65,7 +60,5 @@ public interface NasaApi {
             @Query("patent_issued") String patent_issued,
             @Query("software") String software,
             @Query("Spinoff") String Spinoff,
-            @Query("api_key") String apiKey
-    );
-
+            @Query("api_key") String apiKey);
 }

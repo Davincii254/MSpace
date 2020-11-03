@@ -66,6 +66,7 @@ public class ApodsListActivity extends AppCompatActivity {
         String date = intent.getStringExtra("date");
 
         NasaApi client = NasaClient.getClient();
+        // Refer to the client class
 
         Call<NasaApodSearchResponse> call = client.getApods("today", "true","8RVaXYWs7HPc5GqaGjAhbPrTREKfzezB4YslyNTp");
 
