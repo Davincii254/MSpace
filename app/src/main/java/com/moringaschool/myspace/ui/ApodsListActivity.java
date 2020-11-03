@@ -58,7 +58,7 @@ public class ApodsListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.apods_list);
+        setContentView(R.layout.activity_apods_list);
         ButterKnife.bind(this);
 
        final Intent intent = getIntent();
@@ -83,7 +83,9 @@ public class ApodsListActivity extends AppCompatActivity {
                         mRecycleView.setLayoutManager(layoutManager);
                         mRecycleView.setHasFixedSize(true);
                         showApods();
-                    }else {
+                    }
+                    else
+                        {
                         showUnsuccessfulMessage();
                     }
                 }
