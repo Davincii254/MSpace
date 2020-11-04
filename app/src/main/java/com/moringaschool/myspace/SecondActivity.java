@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -24,6 +25,7 @@ import butterknife.ButterKnife;
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
     RecyclerView tvMain;
     @BindView(R.id.button1) ImageButton mButton1;
+    @BindView(R.id.techportbutton) ImageButton mButton2;
 
 
     private FirebaseAuth mAuth;
@@ -40,15 +42,17 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) {
+                if (user != user) {
                     getSupportActionBar().setTitle("Welcome, " + user.getDisplayName() + "!");
                 } else {
-
+                    Toast.makeText(SecondActivity.this, "Welcome to Space App!.",
+                            Toast.LENGTH_SHORT).show();
                 }
             }
         };
 
         mButton1.setOnClickListener(this);
+        mButton2.setOnClickListener(this);
     }
 
     @Override
@@ -66,9 +70,14 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     @Override
-    public void onClick(View v) {
-        if (v == mButton1){
+    public void onClick(View view) {
+        if (view == mButton1){
             Intent intent = new Intent(SecondActivity.this, ApodsActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        if (view == mButton2){
+            Intent intent = new Intent(SecondActivity.this, TechportActivity.class);
             startActivity(intent);
             finish();
         }

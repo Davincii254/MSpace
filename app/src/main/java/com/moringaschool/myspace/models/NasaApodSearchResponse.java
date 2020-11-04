@@ -12,7 +12,7 @@ public class NasaApodSearchResponse {
     public Integer total;
     @SerializedName("apods")
     @Expose
-    public List<Apods> apods = null;
+    public List<Apods> apods;
 
     /**
      * No args constructor for use in serialization

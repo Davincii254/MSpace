@@ -31,7 +31,6 @@ public class  ApodAdapter extends FirebaseRecyclerAdapter<Apods, ApodAdapter.Apo
     private Apods apods;
 
 
-
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
      * {@link FirebaseRecyclerOptions} for configuration options.

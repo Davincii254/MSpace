@@ -36,23 +36,21 @@ public class ApodsActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
-        if(view == mSubmit){
+        if (view == mSubmit) {
             String date = mDate.getText().toString();
             Intent intent = new Intent(ApodsActivity.this, ApodsListActivity.class);
             intent.putExtra("date", date);
             startActivity(intent);
-    }
-        if (view == mSave) {
-            flipIt(view);
-            Intent intent = new Intent(ApodsActivity.this, SavedApodActivity.class);
-            startActivity(intent);
         }
+//        if (view == mSave) {
+//            flipIt(view);
+//            Intent intent = new Intent(ApodsActivity.this, SavedApodActivity.class);
+//            startActivity(intent);
+//        }
     }
     private void flipIt(final View viewToFlip) {
         ObjectAnimator flip = ObjectAnimator.ofFloat(viewToFlip, "rotationX", 0f, 360f);
         flip.setDuration(500);
         flip.start();
     }
-
-
 }
