@@ -35,7 +35,7 @@ User is able to save their favorite images.
 
 ## Quick Demo of the App
 What you get after starting the app <br> <br><br>
-<img src="app/src/main/res/drawable/picture.jpg" height="" width="" alt="The main page" >
+<img src="app/src/main/res/drawable/picture.png" height="" width="" alt="The main page" >
 
 
 
