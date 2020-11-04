@@ -46,7 +46,7 @@ Educate the user on some on our solar system mysteries
 
 
 ## Api Used
-- Nasa-Api - https://nasa.gov/
+- Nasa-Api - https:/nasa.gov/
 
 ## LICENSE
 
