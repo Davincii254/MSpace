@@ -22,7 +22,7 @@ import butterknife.ButterKnife;
 public class ApodsActivity extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.Date) EditText mDate;
     @BindView(R.id.btnSubmit1) Button mSubmit;
-    @BindView(R.id.save) Button mSave;
+//  @BindView(R.id.save) Button mSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class ApodsActivity extends AppCompatActivity implements View.OnClickList
         ButterKnife.bind(this);
 
         mSubmit.setOnClickListener(this);
-        mSave.setOnClickListener(this);
+//      mSave.setOnClickListener(this);
     }
 
     @Override
@@ -42,15 +42,16 @@ public class ApodsActivity extends AppCompatActivity implements View.OnClickList
             intent.putExtra("date", date);
             startActivity(intent);
         }
+
 //        if (view == mSave) {
 //            flipIt(view);
 //            Intent intent = new Intent(ApodsActivity.this, SavedApodActivity.class);
 //            startActivity(intent);
 //        }
     }
-    private void flipIt(final View viewToFlip) {
-        ObjectAnimator flip = ObjectAnimator.ofFloat(viewToFlip, "rotationX", 0f, 360f);
-        flip.setDuration(500);
-        flip.start();
-    }
+//    private void flipIt(final View viewToFlip) {
+//        ObjectAnimator flip = ObjectAnimator.ofFloat(viewToFlip, "rotationX", 0f, 360f);
+//        flip.setDuration(500);
+//        flip.start();
+//    }
 }

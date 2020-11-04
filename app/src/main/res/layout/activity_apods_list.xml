@@ -70,7 +70,7 @@
             android:text="Astronomy Picture of the Day is provided by NASA and Michigan Technological University. According to the website,
             Each day a different image or photograph of our universe is featured, along with a brief explanation written by a professional astronomer."
             android:textColor="#FF9800"
-            android:textSize="21sp" />
+            android:textSize="18sp" />
 
 
         <TextView
