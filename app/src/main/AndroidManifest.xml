@@ -13,21 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TechportActivity"></activity>
+        <activity android:name=".TechportActivity" />
         <activity android:name=".ui.SavedApodActivity" />
         <activity android:name=".MarsActivity" />
         <activity android:name=".ApodsActivity" />
         <activity android:name=".ui.ApodDetailActivity" />
         <activity android:name=".ui.ApodsListActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".SecondActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".SignUpActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SecondActivity"
             android:label="@string/app_name">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.myspace.MainActivity" />
+                android:value="com.moringaschool.myspace.SecondActivity" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -19,7 +19,7 @@ import butterknife.ButterKnife;
 
 public class ApodDetailActivity extends AppCompatActivity {
     @BindView(R.id.viewPager)  ViewPager mViewPager;
-    @BindView(R.id.Apodimage)  ViewPager mApodimage;
+    @BindView(R.id.pagerHeader)  ViewPager mApodimage;
     private ApodsListAdapter adapterViewPager;
     private ApodsPagerAdapter pagerAdapter;
 
